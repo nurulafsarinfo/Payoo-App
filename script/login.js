@@ -8,18 +8,34 @@ document.getElementById('login-btn').addEventListener('click',
         console.log(accountNumber);
 
         const pin = document.getElementById('account-pin').value;
+        const convertPin = parseInt(pin);
         console.log(pin);
         console.log(accountNumber.length);
 
+//         if(accountNumber.length === 11){
+//             console.log("Number Thats okay")
+//             if(pin === '1234'){
+//                 window.location.href = "./main.html";
+//             }else{
+//                 console.log("pin thik nai");
+//             }
+//         }
+//         else{
+//             // console.log("need valid account number")
+            
+//         }
+// })
+
         if(accountNumber.length === 11){
-            console.log("Number Thats okay")
-            if(pin === '1234'){
-                window.location.href = "./main.html";
-            }else{
-                console.log("pin thik nai");
+            if(convertPin === 1234){
+               window.location.href = "main.html";
+            }
+            else{
+                alert("Pin is not valid");
             }
         }
         else{
-            console.log("need valid account number")
+            alert("Account number is not correct");
         }
+    
 })
